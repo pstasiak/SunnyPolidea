@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DecimalCoordinateInput">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="F4c-ve-SZp"/>
+                <outlet property="signControl" destination="o3T-Ik-uuY" id="ken-wR-vbe"/>
+                <outlet property="textField" destination="g2w-60-TJL" id="yCZ-X3-ldB"/>
+                <outlet property="textLabel" destination="Dze-cH-Eq0" id="aXg-H4-aft"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="283" height="56"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dze-cH-Eq0">
+                    <rect key="frame" x="0.0" y="17" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g2w-60-TJL">
+                    <rect key="frame" x="50" y="13" width="176" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                </textField>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="o3T-Ik-uuY">
+                    <rect key="frame" x="234" y="14" width="49" height="29"/>
+                    <segments>
+                        <segment title="N"/>
+                        <segment title="S"/>
+                    </segments>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="o3T-Ik-uuY" secondAttribute="bottom" id="0yF-2y-VRp"/>
+                <constraint firstItem="Dze-cH-Eq0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" id="1Ui-De-VCw"/>
+                <constraint firstItem="g2w-60-TJL" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" id="4n9-RV-iVK"/>
+                <constraint firstItem="o3T-Ik-uuY" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" id="7ML-sI-yfz"/>
+                <constraint firstItem="g2w-60-TJL" firstAttribute="leading" secondItem="Dze-cH-Eq0" secondAttribute="trailing" constant="8" id="L9Q-ej-hd0"/>
+                <constraint firstItem="Dze-cH-Eq0" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="R9g-ba-NMF"/>
+                <constraint firstItem="g2w-60-TJL" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="W95-f6-5Jc"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="g2w-60-TJL" secondAttribute="bottom" id="h97-9V-YHw"/>
+                <constraint firstItem="Dze-cH-Eq0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="iFN-ka-ot6"/>
+                <constraint firstAttribute="trailing" secondItem="o3T-Ik-uuY" secondAttribute="trailing" id="iFh-4E-WLZ"/>
+                <constraint firstItem="o3T-Ik-uuY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="kL5-OI-Xvu"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Dze-cH-Eq0" secondAttribute="bottom" id="loj-0W-xiq"/>
+                <constraint firstItem="o3T-Ik-uuY" firstAttribute="leading" secondItem="g2w-60-TJL" secondAttribute="trailing" constant="8" id="vIl-Es-YhG"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="485.5" y="-218"/>
+        </view>
+    </objects>
+</document>
