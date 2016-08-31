@@ -13,6 +13,7 @@
 #import "ColorScheme.h"
 #import "LocationSearchViewController.h"
 #import "IQKeyboardManager.h"
+#import "LocationSearchViewModel.h"
 
 @interface MainCoordinator ()
 @property(nonatomic, strong, readonly) AppContext *appContext;
@@ -66,8 +67,9 @@ MM_NOT_DESIGNATED_INITIALIZER()
 
 #pragma mark - NavigationBarItems
 
+
 - (void)didTapSearchButton:(id)sender {
-    LocationSearchViewController *searchVC = [LocationSearchViewController new];
+    LocationSearchViewController *searchVC = [[LocationSearchViewController alloc] initWithViewModel:[LocationSearchViewModel new]];
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:searchVC];
     [self.window.rootViewController presentViewController:navVC animated:YES completion:nil];
 }

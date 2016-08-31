@@ -14,6 +14,7 @@
 		0116910B1D74D2E2006C0D82 /* LocationSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011691091D74D2E2006C0D82 /* LocationSearchViewController.xib */; };
 		0116910F1D77144D006C0D82 /* DecimalCoordinateInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 0116910E1D77144D006C0D82 /* DecimalCoordinateInput.m */; };
 		011691111D771797006C0D82 /* DecimalCoordinateInput.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011691101D771797006C0D82 /* DecimalCoordinateInput.xib */; };
+		011691151D774278006C0D82 /* LocationSearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 011691141D774278006C0D82 /* LocationSearchViewModel.m */; };
 		28B62B9762B2E6BB5B31D0F8 /* Pods_SunnyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DDA2F3DE57FFCF2E1BF6330 /* Pods_SunnyTests.framework */; };
 		81086074C0194450A61A38A4 /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 81086C67E4993E017DF42304 /* LocationService.m */; };
 		810860826C4D07DEC7464622 /* AppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 8108696C4195AEA182DA7346 /* AppContext.m */; };
@@ -64,6 +65,8 @@
 		0116910D1D77144D006C0D82 /* DecimalCoordinateInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DecimalCoordinateInput.h; path = Search/View/DecimalCoordinateInput.h; sourceTree = "<group>"; };
 		0116910E1D77144D006C0D82 /* DecimalCoordinateInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DecimalCoordinateInput.m; path = Search/View/DecimalCoordinateInput.m; sourceTree = "<group>"; };
 		011691101D771797006C0D82 /* DecimalCoordinateInput.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DecimalCoordinateInput.xib; path = Search/View/DecimalCoordinateInput.xib; sourceTree = "<group>"; };
+		011691131D774278006C0D82 /* LocationSearchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationSearchViewModel.h; sourceTree = "<group>"; };
+		011691141D774278006C0D82 /* LocationSearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationSearchViewModel.m; sourceTree = "<group>"; };
 		2DDA2F3DE57FFCF2E1BF6330 /* Pods_SunnyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunnyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EEEAC67AF7A95409B149FCE /* Pods-SunnyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunnyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SunnyTests/Pods-SunnyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7CAFEA3AE0DC8F1F725C4B67 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +160,7 @@
 		011691061D74D180006C0D82 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				011691121D77393A006C0D82 /* Model */,
 				0116910C1D771405006C0D82 /* View */,
 				011691071D74D2E2006C0D82 /* LocationSearchViewController.h */,
 				011691081D74D2E2006C0D82 /* LocationSearchViewController.m */,
@@ -173,6 +177,15 @@
 				011691101D771797006C0D82 /* DecimalCoordinateInput.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		011691121D77393A006C0D82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				011691131D774278006C0D82 /* LocationSearchViewModel.h */,
+				011691141D774278006C0D82 /* LocationSearchViewModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		106A8C8C317ECCF5C301DA63 /* Pods */ = {
@@ -618,6 +631,7 @@
 				011691011D74B728006C0D82 /* MainCoordinator.m in Sources */,
 				0116910F1D77144D006C0D82 /* DecimalCoordinateInput.m in Sources */,
 				81086FAA7F5BBF21F5E773D3 /* WeatherServiceItem.m in Sources */,
+				011691151D774278006C0D82 /* LocationSearchViewModel.m in Sources */,
 				810860826C4D07DEC7464622 /* AppContext.m in Sources */,
 				81086074C0194450A61A38A4 /* LocationService.m in Sources */,
 				81086FED283F8734681D7BAD /* HTTPClient.m in Sources */,

@@ -13,6 +13,20 @@
     return _##name;     \
 }
 
+#define DidUpdateCopyPropertyImplementation(name, didSetBlock)\
+    if ([_##name isEqual:name]) {\
+        return;\
+    }\
+    _##name = [name copy];\
+    didSetBlock();
+
+#define DidUpdateAssignPropertyImplementation(name, didSetBlock)\
+if (_##name == name) {\
+return;\
+}\
+_##name = name;\
+didSetBlock();
+
 #pragma mark - Cast View
 
 /*

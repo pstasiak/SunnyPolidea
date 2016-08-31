@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Metamacros.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+@class LocationSearchViewModel;
 
 @interface LocationSearchViewController : UIViewController
 
+MM_EMPTY_INIT_UNAVAILABLE
+
+- (instancetype)initWithViewModel:(LocationSearchViewModel *)viewModel NS_DESIGNATED_INITIALIZER;
+
 @end
+
+NS_ASSUME_NONNULL_END
