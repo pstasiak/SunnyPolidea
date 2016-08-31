@@ -9,6 +9,7 @@ pod 'DZNEmptyDataSet', '1.7.3'
 pod 'libextobjc'
 pod 'ReflectableEnum'
 pod 'Pages'
+pod 'IQKeyboardManager'
 
 target :SunnyTests, :exclusive => true do
   pod 'OCMockito', '3.0.1'

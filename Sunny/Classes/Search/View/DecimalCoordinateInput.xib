@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DecimalCoordinateInput">
@@ -24,12 +25,19 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g2w-60-TJL">
-                    <rect key="frame" x="50" y="13" width="176" height="30"/>
+                    <rect key="frame" x="50" y="10" width="153" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="c2V-IP-GCj"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                 </textField>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="o3T-Ik-uuY">
-                    <rect key="frame" x="234" y="14" width="49" height="29"/>
+                    <rect key="frame" x="211" y="10" width="72" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" secondItem="o3T-Ik-uuY" secondAttribute="height" multiplier="2:1" id="dDc-92-bnZ"/>
+                        <constraint firstAttribute="height" constant="36" id="uNF-Nn-2aY"/>
+                    </constraints>
                     <segments>
                         <segment title="N"/>
                         <segment title="S"/>

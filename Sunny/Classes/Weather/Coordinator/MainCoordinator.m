@@ -12,10 +12,12 @@
 #import "Pages-Swift.h"
 #import "ColorScheme.h"
 #import "LocationSearchViewController.h"
+#import "IQKeyboardManager.h"
 
 @interface MainCoordinator ()
 @property(nonatomic, strong, readonly) AppContext *appContext;
 @property(nonatomic, strong, readonly) UIWindow *window;
+@property(nonatomic, strong, readwrite) IQKeyboardManager *keyboardManager;
 @end
 
 @implementation MainCoordinator
@@ -24,13 +26,23 @@ MM_NOT_DESIGNATED_INITIALIZER()
 
 - (instancetype)initWithAppContext:(AppContext *)appContext
                             window:(UIWindow *)window {
+    return [self initWithAppContext:appContext
+                             window:window
+                    keyboardManager:[IQKeyboardManager sharedManager]];
+}
+
+- (instancetype)initWithAppContext:(AppContext *)appContext
+                            window:(UIWindow *)window
+                   keyboardManager:(IQKeyboardManager *)keyboardManager {
     NSParameterAssert(appContext);
     NSParameterAssert(window);
+    NSParameterAssert(keyboardManager);
     
     self = [super init];
     if (self) {
         _appContext = appContext;
         _window = window;
+        _keyboardManager = keyboardManager;
     }
     return self;
 }
@@ -49,6 +61,7 @@ MM_NOT_DESIGNATED_INITIALIZER()
                                                   action:@checkselector(self, didTapSearchButton:)];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:pagesController];
     [self.window makeKeyAndVisible];
+    self.keyboardManager.enable = YES;
 }
 
 #pragma mark - NavigationBarItems

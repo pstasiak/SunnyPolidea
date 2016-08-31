@@ -11,12 +11,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class AppContext;
+@class AppContext, IQKeyboardManager;
 
 @interface MainCoordinator : NSObject
 MM_EMPTY_INIT_UNAVAILABLE
 - (instancetype)initWithAppContext:(AppContext *)appContext
-                            window:(UIWindow *)window NS_DESIGNATED_INITIALIZER;
+                            window:(UIWindow *)window
+                   keyboardManager:(IQKeyboardManager *)keyboardManager NS_DESIGNATED_INITIALIZER;
+
+- (instancetype)initWithAppContext:(AppContext *)appContext
+                            window:(UIWindow *)window;
 - (void)start;
 
 @end

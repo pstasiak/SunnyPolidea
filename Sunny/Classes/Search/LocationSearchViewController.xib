@@ -15,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="pSa-8D-4hu">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="297"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="332"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1f-4P-fgj">
                             <rect key="frame" x="15" y="20" width="77" height="21"/>
@@ -24,22 +24,28 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location name (London, Warsaw etc.)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k9d-Zl-uCJ">
-                            <rect key="frame" x="15" y="51" width="290" height="30"/>
+                            <rect key="frame" x="15" y="51" width="290" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="3FP-1G-lbo"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zst-4y-F3X">
-                            <rect key="frame" x="194" y="91" width="111" height="30"/>
+                            <rect key="frame" x="194" y="97" width="111" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="sb0-46-OLN"/>
+                            </constraints>
                             <state key="normal" title="Search by name"/>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geographic coordinates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ady-h1-adh">
-                            <rect key="frame" x="15" y="141" width="184" height="21"/>
+                            <rect key="frame" x="15" y="153" width="184" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="v72-xW-XK2" customClass="DecimalCoordinateInput">
-                            <rect key="frame" x="15" y="172" width="290" height="30"/>
+                            <rect key="frame" x="15" y="184" width="290" height="36"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" priority="250" constant="5" id="84X-sK-NxM"/>
@@ -52,7 +58,7 @@
                             </variation>
                         </view>
                         <view contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="hpb-ui-RVx" customClass="DecimalCoordinateInput">
-                            <rect key="frame" x="15" y="212" width="290" height="30"/>
+                            <rect key="frame" x="15" y="235" width="290" height="36"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="1z4-Vg-xHF"/>
@@ -65,7 +71,10 @@
                             </variation>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFy-Vh-11U">
-                            <rect key="frame" x="151" y="252" width="154" height="30"/>
+                            <rect key="frame" x="151" y="281" width="154" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="2qT-ii-tCh"/>
+                            </constraints>
                             <state key="normal" title="Search by coordinates"/>
                         </button>
                     </subviews>
@@ -87,7 +96,7 @@
                         <constraint firstItem="X1f-4P-fgj" firstAttribute="top" secondItem="pSa-8D-4hu" secondAttribute="top" constant="20" id="VKM-Ib-g7M"/>
                         <constraint firstItem="Ady-h1-adh" firstAttribute="leading" secondItem="pSa-8D-4hu" secondAttribute="leading" constant="15" id="Xvw-54-HW6"/>
                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ady-h1-adh" secondAttribute="trailing" id="bad-mA-4Jj"/>
-                        <constraint firstItem="hpb-ui-RVx" firstAttribute="top" secondItem="v72-xW-XK2" secondAttribute="bottom" constant="10" id="fFu-Ch-wmq"/>
+                        <constraint firstItem="hpb-ui-RVx" firstAttribute="top" secondItem="v72-xW-XK2" secondAttribute="bottom" constant="15" id="fFu-Ch-wmq"/>
                         <constraint firstItem="zst-4y-F3X" firstAttribute="top" secondItem="Ady-h1-adh" secondAttribute="bottom" constant="5" id="fyc-fh-ax4"/>
                         <constraint firstAttribute="trailing" secondItem="NFy-Vh-11U" secondAttribute="trailing" constant="15" id="iHs-nj-OXX"/>
                         <constraint firstAttribute="bottom" secondItem="v72-xW-XK2" secondAttribute="bottom" constant="30" id="jw8-qr-Af9"/>
@@ -101,10 +110,10 @@
                         <mask key="constraints">
                             <exclude reference="rXc-fm-Vrd"/>
                             <exclude reference="jw8-qr-Af9"/>
+                            <exclude reference="Bik-KK-SWb"/>
                             <exclude reference="MLu-6K-9fG"/>
                             <exclude reference="fyc-fh-ax4"/>
                             <exclude reference="qkp-JC-FXI"/>
-                            <exclude reference="Bik-KK-SWb"/>
                         </mask>
                     </variation>
                 </view>
