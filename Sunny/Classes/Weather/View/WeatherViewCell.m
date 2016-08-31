@@ -18,11 +18,13 @@
     self = [super initWithFrame:frame];
     if (self) {
         UILabel *descriptionLabel = [UILabel new];
+        descriptionLabel.textColor = [UIColor whiteColor];
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = NO;
         [self.contentView addSubview:descriptionLabel];
         self.descriptionLabel = descriptionLabel;
         
         UILabel *valueLabel = [UILabel new];
+        valueLabel.textColor = [UIColor whiteColor];
         valueLabel.translatesAutoresizingMaskIntoConstraints = NO;
         [self.contentView addSubview:valueLabel];
         self.valueLabel = valueLabel;

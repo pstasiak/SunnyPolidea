@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49F9C6C3D21D6714C2EAC1FF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FFB9ED3F2A06761BE4B3852 /* libPods.a */; };
-		59EE9F8291D2A16B0D1A0120 /* libPods-SunnyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E23254BCCCC81640063415D9 /* libPods-SunnyTests.a */; };
+		011690FD1D74B3A9006C0D82 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 011690FC1D74B3A9006C0D82 /* Podfile */; };
+		011691011D74B728006C0D82 /* MainCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 011691001D74B728006C0D82 /* MainCoordinator.m */; };
+		011691051D74C9F1006C0D82 /* ColorScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 011691041D74C9F1006C0D82 /* ColorScheme.m */; };
+		0116910A1D74D2E2006C0D82 /* LocationSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011691081D74D2E2006C0D82 /* LocationSearchViewController.m */; };
+		0116910B1D74D2E2006C0D82 /* LocationSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011691091D74D2E2006C0D82 /* LocationSearchViewController.xib */; };
+		28B62B9762B2E6BB5B31D0F8 /* Pods_SunnyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DDA2F3DE57FFCF2E1BF6330 /* Pods_SunnyTests.framework */; };
 		81086074C0194450A61A38A4 /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 81086C67E4993E017DF42304 /* LocationService.m */; };
 		810860826C4D07DEC7464622 /* AppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 8108696C4195AEA182DA7346 /* AppContext.m */; };
 		8108623D90A4E238DD509086 /* WeatherViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8108642BE7BB6D5781E6400A /* WeatherViewCell.m */; };
@@ -33,6 +37,7 @@
 		A1FED69B1B0F490900F330D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FED69A1B0F490900F330D9 /* main.m */; };
 		A1FED69E1B0F490900F330D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FED69D1B0F490900F330D9 /* AppDelegate.m */; };
 		A1FED6A61B0F490900F330D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1FED6A51B0F490900F330D9 /* Images.xcassets */; };
+		B4FE5939108151F27D911BB6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CAFEA3AE0DC8F1F725C4B67 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +51,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		011690FC1D74B3A9006C0D82 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		011690FF1D74B728006C0D82 /* MainCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainCoordinator.h; path = Coordinator/MainCoordinator.h; sourceTree = "<group>"; };
+		011691001D74B728006C0D82 /* MainCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainCoordinator.m; path = Coordinator/MainCoordinator.m; sourceTree = "<group>"; };
+		011691031D74C9F1006C0D82 /* ColorScheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorScheme.h; path = Styling/ColorScheme.h; sourceTree = "<group>"; };
+		011691041D74C9F1006C0D82 /* ColorScheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorScheme.m; path = Styling/ColorScheme.m; sourceTree = "<group>"; };
+		011691071D74D2E2006C0D82 /* LocationSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationSearchViewController.h; path = Search/LocationSearchViewController.h; sourceTree = "<group>"; };
+		011691081D74D2E2006C0D82 /* LocationSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationSearchViewController.m; path = Search/LocationSearchViewController.m; sourceTree = "<group>"; };
+		011691091D74D2E2006C0D82 /* LocationSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LocationSearchViewController.xib; path = Search/LocationSearchViewController.xib; sourceTree = "<group>"; };
+		2DDA2F3DE57FFCF2E1BF6330 /* Pods_SunnyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunnyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EEEAC67AF7A95409B149FCE /* Pods-SunnyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunnyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SunnyTests/Pods-SunnyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7CAFEA3AE0DC8F1F725C4B67 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		810860003DCA6201C5AE02C7 /* WeatherViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewCell.h; sourceTree = "<group>"; };
 		81086020A61AE61C6780A2A9 /* SampleResponse.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = SampleResponse.json; sourceTree = "<group>"; };
 		810861E5E0C985F28C6ECDDD /* NSObject+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Utilities.m"; sourceTree = "<group>"; };
@@ -83,7 +98,6 @@
 		81086EF806ACDF1A4752C6A2 /* WeatherDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherDataSource.h; sourceTree = "<group>"; };
 		81086F385DEB629ECD914513 /* TestingAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestingAppDelegate.h; sourceTree = "<group>"; };
 		81086F9B00DB9426F5172330 /* TestingAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestingAppDelegate.m; sourceTree = "<group>"; };
-		8FFB9ED3F2A06761BE4B3852 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1FED6951B0F490900F330D9 /* Sunny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sunny.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1FED6991B0F490900F330D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1FED69A1B0F490900F330D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -94,7 +108,6 @@
 		A1FED6B31B0F490900F330D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A95644B92865435CE70728C1 /* Pods-SunnyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunnyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SunnyTests/Pods-SunnyTests.release.xcconfig"; sourceTree = "<group>"; };
 		DF7114813D75EF612DD07433 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		E23254BCCCC81640063415D9 /* libPods-SunnyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SunnyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBD67DA846141A3343113F6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,7 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49F9C6C3D21D6714C2EAC1FF /* libPods.a in Frameworks */,
+				B4FE5939108151F27D911BB6 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,13 +124,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59EE9F8291D2A16B0D1A0120 /* libPods-SunnyTests.a in Frameworks */,
+				28B62B9762B2E6BB5B31D0F8 /* Pods_SunnyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		011690FE1D74B6E7006C0D82 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				011690FF1D74B728006C0D82 /* MainCoordinator.h */,
+				011691001D74B728006C0D82 /* MainCoordinator.m */,
+			);
+			name = Coordinator;
+			sourceTree = "<group>";
+		};
+		011691021D74C782006C0D82 /* Styling */ = {
+			isa = PBXGroup;
+			children = (
+				011691031D74C9F1006C0D82 /* ColorScheme.h */,
+				011691041D74C9F1006C0D82 /* ColorScheme.m */,
+			);
+			name = Styling;
+			sourceTree = "<group>";
+		};
+		011691061D74D180006C0D82 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				011691071D74D2E2006C0D82 /* LocationSearchViewController.h */,
+				011691081D74D2E2006C0D82 /* LocationSearchViewController.m */,
+				011691091D74D2E2006C0D82 /* LocationSearchViewController.xib */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
 		106A8C8C317ECCF5C301DA63 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +173,7 @@
 		8108609A34BC6568FEF0FF7B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				011691061D74D180006C0D82 /* Search */,
 				8108616C39543E0F9E814951 /* Weather */,
 				81086B80D60EA42A9686C739 /* Shared */,
 			);
@@ -153,6 +195,7 @@
 		8108616C39543E0F9E814951 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				011690FE1D74B6E7006C0D82 /* Coordinator */,
 				8108611A114D1CFB8812FFF1 /* View */,
 				81086BF5C33B40E59B735247 /* DataSource */,
 				81086B5CAC26FAA3D175EC30 /* Model */,
@@ -222,6 +265,7 @@
 		81086B80D60EA42A9686C739 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				011691021D74C782006C0D82 /* Styling */,
 				81086FD3077CAE66CD70906A /* Utilities */,
 				810869E266CA4EF606918050 /* Binder */,
 				810869019501255A28A3B35A /* AppContext */,
@@ -272,8 +316,8 @@
 		9876D9D8F9C01888B3209F3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8FFB9ED3F2A06761BE4B3852 /* libPods.a */,
-				E23254BCCCC81640063415D9 /* libPods-SunnyTests.a */,
+				7CAFEA3AE0DC8F1F725C4B67 /* Pods.framework */,
+				2DDA2F3DE57FFCF2E1BF6330 /* Pods_SunnyTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -301,6 +345,7 @@
 		A1FED6971B0F490900F330D9 /* Sunny */ = {
 			isa = PBXGroup;
 			children = (
+				011690FC1D74B3A9006C0D82 /* Podfile */,
 				A1FED69C1B0F490900F330D9 /* AppDelegate.h */,
 				A1FED69D1B0F490900F330D9 /* AppDelegate.m */,
 				A1FED6A51B0F490900F330D9 /* Images.xcassets */,
@@ -428,7 +473,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				011690FD1D74B3A9006C0D82 /* Podfile in Resources */,
 				A1FED6A61B0F490900F330D9 /* Images.xcassets in Resources */,
+				0116910B1D74D2E2006C0D82 /* LocationSearchViewController.xib in Resources */,
 				81086BE7472756D1A0E34DD3 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,13 +588,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				011691051D74C9F1006C0D82 /* ColorScheme.m in Sources */,
 				A1FED69E1B0F490900F330D9 /* AppDelegate.m in Sources */,
 				A1FED69B1B0F490900F330D9 /* main.m in Sources */,
+				0116910A1D74D2E2006C0D82 /* LocationSearchViewController.m in Sources */,
 				81086A0EB6234DF09E176493 /* WeatherViewController.m in Sources */,
 				8108659CBB831F50DCF5F586 /* WeatherDataSource.m in Sources */,
 				81086327B6F6B5C4345B37BD /* NSObject+Utilities.m in Sources */,
 				8108623D90A4E238DD509086 /* WeatherViewCell.m in Sources */,
 				810865F80AE09671C4990034 /* WeatherService.m in Sources */,
+				011691011D74B728006C0D82 /* MainCoordinator.m in Sources */,
 				81086FAA7F5BBF21F5E773D3 /* WeatherServiceItem.m in Sources */,
 				810860826C4D07DEC7464622 /* AppContext.m in Sources */,
 				81086074C0194450A61A38A4 /* LocationService.m in Sources */,

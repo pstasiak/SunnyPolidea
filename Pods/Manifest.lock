@@ -67,6 +67,7 @@ PODS:
   - OHHTTPStubs/NSURLSession (4.7.0):
     - OHHTTPStubs/Core
   - OHHTTPStubs/OHPathHelpers (4.7.0)
+  - Pages (0.6.3)
   - ReflectableEnum (0.1.1)
   - Specta (1.0.5)
 
@@ -77,6 +78,7 @@ DEPENDENCIES:
   - libextobjc
   - OCMockito (= 3.0.1)
   - OHHTTPStubs (= 4.7.0)
+  - Pages
   - ReflectableEnum
   - Specta (= 1.0.5)
 
@@ -88,6 +90,7 @@ SPEC CHECKSUMS:
   OCHamcrest: abcfbf4ebd75d5aadbcc729cff0cb648faf2d1b0
   OCMockito: 9eee3c61e42f7cb8aa015d66f8cc16849701d973
   OHHTTPStubs: d2bf6a0f407620d67e75a1d3f12d86a2b1dd15c0
+  Pages: 71e80bc64040f1176297c327d080d80b7e74b38c
   ReflectableEnum: bf9d36f8c35122242125140a22b8921d071989aa
   Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
 

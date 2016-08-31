@@ -82,3 +82,18 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-SunnyTests/Expecta.framework"
+  install_framework "Pods-SunnyTests/OCHamcrest.framework"
+  install_framework "Pods-SunnyTests/OCMockito.framework"
+  install_framework "Pods-SunnyTests/OHHTTPStubs.framework"
+  install_framework "Pods-SunnyTests/Specta.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-SunnyTests/Expecta.framework"
+  install_framework "Pods-SunnyTests/OCHamcrest.framework"
+  install_framework "Pods-SunnyTests/OCMockito.framework"
+  install_framework "Pods-SunnyTests/OHHTTPStubs.framework"
+  install_framework "Pods-SunnyTests/Specta.framework"
+fi

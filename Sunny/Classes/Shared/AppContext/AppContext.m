@@ -9,8 +9,13 @@
 #import "WeatherService.h"
 #import "LocationService.h"
 #import "HTTPClient.h"
+#import "ColorScheme.h"
 
 @implementation AppContext
+
+- (id<ColorSchemeProtocol>)colorScheme {
+    return [ColorScheme new];
+}
 
 - (WeatherViewController *)weatherViewController {
     return [[WeatherViewController alloc] initWithDataSource:[self weatherDataSource]];

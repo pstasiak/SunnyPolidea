@@ -9,11 +9,14 @@
 @class WeatherDataSource;
 @class WeatherService;
 @class LocationService;
+@protocol ColorSchemeProtocol;
 
 @interface AppContext : NSObject
 
+- (id<ColorSchemeProtocol>)colorScheme;
 - (WeatherViewController *)weatherViewController;
 - (WeatherDataSource *)weatherDataSource;
 - (WeatherService *)weatherService;
 - (LocationService *)locationService;
+
 @end

@@ -41,7 +41,7 @@ CastView(UICollectionView, collectionView)
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor clearColor];
     [self configureCollectionView];
     [self configureDataSourceUpdates];
     [self updateWeather:nil];

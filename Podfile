@@ -1,3 +1,4 @@
+use_frameworks!
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
@@ -7,6 +8,7 @@ pod 'AFNetworking', '3.0.4'
 pod 'DZNEmptyDataSet', '1.7.3'
 pod 'libextobjc'
 pod 'ReflectableEnum'
+pod 'Pages'
 
 target :SunnyTests, :exclusive => true do
   pod 'OCMockito', '3.0.1'

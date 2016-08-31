@@ -34,3 +34,32 @@
 #pragma mark - Helpers
 
 #define _CallX(_1, _2, FUNC, ...) FUNC
+
+#pragma mark - Initializers
+
+#define MMASSERT_SHOULD_NOT_BE_REACHED NSAssert(NO, @"Shouldn't be reached");
+#define MMASSERT_SHOULD_BE_OVERRIDDEN NSAssert(@NO, @"Should be overridden in a subclass");
+#define MMCASSERT_SHOULD_NOT_BE_REACHED NSCAssert(NO, @"Shouldn't be reached");
+
+#ifndef MM_NOT_DESIGNATED_INITIALIZER_ATTRIBUTE
+#define MM_NOT_DESIGNATED_INITIALIZER_ATTRIBUTE \
+__attribute__((unavailable("Not the designated initializer")))
+#endif
+
+#define MM_EMPTY_INIT_UNAVAILABLE \
+- (nullable instancetype)init MM_NOT_DESIGNATED_INITIALIZER_ATTRIBUTE; \
++ (nullable instancetype)new MM_NOT_DESIGNATED_INITIALIZER_ATTRIBUTE;
+
+#define MM_NOT_DESIGNATED_NONNULL_INITIALIZER() MM_NOT_DESIGNATED_INITIALIZER_CUSTOM(init)
+#define MM_NOT_DESIGNATED_INITIALIZER() MM_NOT_DESIGNATED_INITIALIZER_CUSTOM(init)
+#define MM_NOT_DESIGNATED_INITIALIZER_CUSTOM(initName) MM_NOT_DESIGNATED_INITIALIZER_CUSTOM_NULLABILITY(initName, nullable)
+#define MM_NOT_DESIGNATED_NONNULL_INITIALIZER_CUSTOM(initName) MM_NOT_DESIGNATED_INITIALIZER_CUSTOM_NULLABILITY(initName, nonnull)
+#define MM_NOT_DESIGNATED_INITIALIZER_CUSTOM_NULLABILITY(initName, nullabilityType) \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wobjc-designated-initializers\"") \
+- (nullabilityType instancetype)initName \
+{ do { \
+NSAssert2(NO, @"%@ is not the designated initializer for instances of %@.", NSStringFromSelector(_cmd), NSStringFromClass([self class])); \
+return nil; \
+} while (0); } \
+_Pragma("clang diagnostic pop")

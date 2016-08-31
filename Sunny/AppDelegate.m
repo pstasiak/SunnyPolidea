@@ -7,20 +7,21 @@
 //
 
 #import "AppDelegate.h"
-#import "WeatherViewController.h"
 #import "Metamacros.h"
 #import "AppContext.h"
+#import "MainCoordinator.h"
 
 @interface AppDelegate ()
 @property(nonatomic, strong, readwrite) AppContext *appContext;
+@property(nonatomic, strong) MainCoordinator *coordinator;
 @end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    WeatherViewController *weatherViewController = [self.appContext weatherViewController];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:weatherViewController];
-    [self.window makeKeyAndVisible];
+    self.coordinator = [[MainCoordinator alloc] initWithAppContext:self.appContext
+                                                            window:self.window];
+    [self.coordinator start];
     return YES;
 }
 

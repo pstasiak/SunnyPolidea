@@ -82,3 +82,18 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods/AFNetworking.framework"
+  install_framework "Pods/DZNEmptyDataSet.framework"
+  install_framework "Pods/Pages.framework"
+  install_framework "Pods/ReflectableEnum.framework"
+  install_framework "Pods/libextobjc.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods/AFNetworking.framework"
+  install_framework "Pods/DZNEmptyDataSet.framework"
+  install_framework "Pods/Pages.framework"
+  install_framework "Pods/ReflectableEnum.framework"
+  install_framework "Pods/libextobjc.framework"
+fi
