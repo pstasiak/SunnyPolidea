@@ -17,17 +17,20 @@ LazyProperty(AFHTTPSessionManager *, sessionManager, ^{
     return [AFHTTPSessionManager manager];
 })
 
-- (BOOL)GET:(NSString *)URLString
- parameters:(id)parameters
-    success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
-    failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
-    NSURLSessionDataTask *dataTask = [self.sessionManager GET:URLString
-                                                   parameters:parameters
-                                                     progress:nil
-                                                      success:success
-                                                      failure:failure];
+- (NSURLSessionDataTask *)GET:(NSString *)URLString
+                   parameters:(id)parameters
+                   completion:(void (^)(id responseObject, NSError *error))completion {
+    NSURLSessionDataTask *dataTask =
+    [self.sessionManager GET:URLString
+                   parameters:parameters
+                     progress:nil
+                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                         completion == nil ?: completion(responseObject, nil);
+                     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                         completion == nil ?: completion(nil, error);
+                     }];
     [dataTask resume];
-    return YES;
+    return dataTask;
 }
 
 @end

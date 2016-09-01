@@ -18,12 +18,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class WeatherServiceLocation;
+
 typedef void (^LocationSearchViewDataUpdateBlock)(id<LocationSearchViewDataProtocol>viewModel);
+typedef void (^LocationSearchCompletionBlock)(WeatherServiceLocation *location, NSError *error);
 
 @interface LocationSearchViewModel : NSObject <LocationSearchViewDataProtocol>
 
 @property (nonatomic, copy, nullable) NSString *locationName;
 @property (nonatomic, copy) LocationSearchViewDataUpdateBlock updateBlock;
+
+- (void)searchForLocationNameWithCompletion:(LocationSearchCompletionBlock)completion;
 
 @end
 

@@ -62,6 +62,7 @@ MM_NOT_DESIGNATED_INITIALIZER()
                                                   action:@checkselector(self, didTapSearchButton:)];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:pagesController];
     [self.window makeKeyAndVisible];
+    self.keyboardManager.keyboardDistanceFromTextField = 20.0;
     self.keyboardManager.enable = YES;
 }
 

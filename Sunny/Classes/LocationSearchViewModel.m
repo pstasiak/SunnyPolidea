@@ -40,4 +40,11 @@
     }
 }
 
+#pragma mark - Handling search
+
+
+- (void)searchForLocationNameWithCompletion:(LocationSearchCompletionBlock)completion {
+    
+}
+
 @end

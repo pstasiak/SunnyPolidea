@@ -52,6 +52,7 @@ PODS:
     - libextobjc/RuntimeExtensions
   - libextobjc/RuntimeExtensions (0.4.1)
   - libextobjc/UmbrellaHeader (0.4.1)
+  - MBProgressHUD (1.0.0)
   - OCHamcrest (5.1.0)
   - OCMockito (3.0.1):
     - OCHamcrest (~> 5.1)
@@ -78,6 +79,7 @@ DEPENDENCIES:
   - Expecta (= 1.0.5)
   - IQKeyboardManager
   - libextobjc
+  - MBProgressHUD (~> 1.0.0)
   - OCMockito (= 3.0.1)
   - OHHTTPStubs (= 4.7.0)
   - Pages
@@ -90,6 +92,7 @@ SPEC CHECKSUMS:
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
   IQKeyboardManager: 50b62c0603308968256f8208886e206c1dcce607
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   OCHamcrest: abcfbf4ebd75d5aadbcc729cff0cb648faf2d1b0
   OCMockito: 9eee3c61e42f7cb8aa015d66f8cc16849701d973
   OHHTTPStubs: d2bf6a0f407620d67e75a1d3f12d86a2b1dd15c0

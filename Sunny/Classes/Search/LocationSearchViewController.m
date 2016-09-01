@@ -25,6 +25,7 @@ MM_NOT_DESIGNATED_INITIALIZER_CUSTOM(initWithCoder:(NSCoder *)aDecoder)
     NSParameterAssert(viewModel);
     if (self = [super initWithNibName:nil bundle:nil]) {
         _viewModel = viewModel;
+        self.title = NSLocalizedString(@"Search Location", "");
     }
     return self;
 }

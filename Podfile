@@ -10,6 +10,7 @@ pod 'libextobjc'
 pod 'ReflectableEnum'
 pod 'Pages'
 pod 'IQKeyboardManager'
+pod 'MBProgressHUD', '~> 1.0.0'
 
 target :SunnyTests, :exclusive => true do
   pod 'OCMockito', '3.0.1'

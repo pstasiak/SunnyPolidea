@@ -6,10 +6,8 @@
 #import "WeatherService.h"
 #import "LocationService.h"
 #import "HTTPClient.h"
-#import "WeatherServiceItem.h"
-
-NSString *WeatherServiceOpenWeatherAPIBaseURL = @"http://api.openweathermap.org/data/2.5/weather";
-NSString *WeatherServiceOpenWeatherAPPID = @"4e41c354247b9bff4a9fa26f51307ec7";
+#import "WeatherServiceLocation.h"
+#import "GetWeatherServiceLocationRequest.h"
 
 @implementation WeatherService
 
@@ -52,39 +50,11 @@ NSString *WeatherServiceOpenWeatherAPPID = @"4e41c354247b9bff4a9fa26f51307ec7";
 - (void)fetchWeatherDataWithLocation:(CLLocation *)location completion:(WeatherServiceCompletionBlock)completion {
     NSParameterAssert(completion);
     NSLog(@"Fetching data for location = %@", location);
-    @weakify(self)
-    [self.httpClient GET:WeatherServiceOpenWeatherAPIBaseURL
-              parameters:[self parametersForLocation:location]
-                 success:^(NSURLSessionDataTask *task, NSDictionary *json) {
-                     @strongify(self)
-                     if (completion) {
-                         completion([self buildItemsFromJSON:json], nil);
-                     }
-                 }
-                 failure:^(NSURLSessionDataTask *task, NSError *error) {
-                     if (completion) {
-                         completion(nil, error);
-                     }
-                 }];
-}
-
-- (NSArray *)buildItemsFromJSON:(NSDictionary *)json {
-    NSDictionary *mainInformation = json[@"main"];
-    return @[
-            [WeatherServiceItem itemWithName:@"Temperature" value:mainInformation[@"temp"] type:WeatherServiceItemTypeTemperature],
-            [WeatherServiceItem itemWithName:@"Humidity" value:mainInformation[@"humidity"] type:WeatherServiceItemTypeHumidity],
-            [WeatherServiceItem itemWithName:@"Pressure" value:mainInformation[@"pressure"] type:WeatherServiceItemTypePressure],
-            [WeatherServiceItem itemWithName:@"Min. temperature" value:mainInformation[@"temp_min"] type:WeatherServiceItemTypeTemperature],
-            [WeatherServiceItem itemWithName:@"Max. temperature" value:mainInformation[@"temp_max"] type:WeatherServiceItemTypeTemperature],
-    ];
-}
-
-- (NSDictionary *)parametersForLocation:(CLLocation *)location {
-    return @{
-            @"lat" : @(location.coordinate.latitude),
-            @"lon" : @(location.coordinate.longitude),
-            @"APPID" : WeatherServiceOpenWeatherAPPID,
-    };
+    GetWeatherServiceLocationRequest *request = [[GetWeatherServiceLocationRequest alloc] initWithCoordinate:location.coordinate];
+    [request sendWithHTTPClient:self.httpClient
+                     completion:^(WeatherServiceLocation *result, NSError *error) {
+                         completion == nil ?: completion(result.items, error);
+                     }];
 }
 
 @end
